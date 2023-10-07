@@ -1,7 +1,10 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { getMoviesCast } from '../../api/api';
+
 import NoPhoto from '..//../images/no-photo.jpg';
+
 import { CastList } from './Casts.styled';
 
 const Casts = () => {

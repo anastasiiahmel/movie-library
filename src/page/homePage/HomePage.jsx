@@ -1,5 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
+
 import { getPopularMovies } from "..//../api/api";
+
 import PopularMoviesList from "components/popularMovieList/PopularMovieList";
 
 

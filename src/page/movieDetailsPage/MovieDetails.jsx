@@ -1,8 +1,11 @@
 import { useState, useEffect, useCallback} from 'react';
+import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { Suspense } from 'react';
-import { useParams, Link, Outlet, useLocation} from 'react-router-dom';
+
 import { getMoviesDetailsById } from '../../api/api';
+
 import { MovieDetailsStyled } from './MovieDetails.styled';
+
 import NoPoster from '../../images/no-photo.jpg';
 
 
@@ -81,11 +84,11 @@ const MovieDetailsPage = () => {
           </div>
         </div>
       </MovieDetailsStyled>
-      <Suspense fallback={<div>Loading subpage...</div>}>
+      <Suspense fallback={<div className='loading-subpage'>Loading subpage...</div>}>
         <Outlet/> 
       </Suspense>
     </>
-  )
+  ) 
 };
 
 

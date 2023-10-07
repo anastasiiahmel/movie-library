@@ -1,6 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { getMoviesReviews } from '../../api/api';
+
 import { ReviesContainer } from './Revies.styled';
 
 
@@ -30,7 +32,7 @@ const Revies = () => {
         <ReviesContainer>
             <ul className='revies-list'>
                 {reviesInfo.length === 0 ? (
-                <p>There are no reviews.</p>
+                <p className='revies-warning'>There are no reviews.</p>
                 ) : (
                 reviesInfo.map(reviesInfo => (
                     <li className='revies-item' key={reviesInfo.id}>

@@ -29,11 +29,6 @@ export async function getMoviesCast(movieId) {
   return response.data.cast;
 }
 
-// export async function getMoviesReviews(movieId) {
-//   const response = await axios.get(`/movie/${movieId}/reviews`);
-//   return response.data.results;
-// }
-
 export async function getMoviesReviews(movieId) {
   const response = await axios.get(`movie/${movieId}/reviews`);
   return response.data.results;

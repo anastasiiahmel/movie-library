@@ -1,10 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
+
 import { getSearchedMovies } from '../../api/api';
+
 import { Searchbar } from 'components/searchBar/SearchBar';
 import PopularMoviesList from 'components/popularMovieList/PopularMovieList';
 
-
+import { MoviePageStyle } from './moviePageStyle.styled';
 
 const MoviePage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -53,11 +55,11 @@ const MoviePage = () => {
 
 
     return (
-        <>
+        <MoviePageStyle>
             <Searchbar onSubmit={handleSubmit}/>
-            {loading && (<div>Loading data...</div>)}
+            {loading && (<div className='loading-movie-page'>Loading data...</div>)}
             <PopularMoviesList searchResults={searchResults}/>
-        </>
+        </MoviePageStyle>
     );
 };
 

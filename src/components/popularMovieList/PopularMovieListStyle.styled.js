@@ -24,7 +24,7 @@ export const PopularMovieListStyle = styled.ul`
     flex-direction: column;
     max-width: 210px;
     background-color: white;
-    /* border-radius: 15px; */
+
     overflow: hidden;
   }
 
@@ -39,5 +39,9 @@ export const PopularMovieListStyle = styled.ul`
     text-align: center;
     min-height: 48px;
     width: 100%;
+  }
+  .hero-section-title {
+    font-size: 50px;
+    color: #660000;
   }
 `;

@@ -94,4 +94,10 @@ export const MovieDetailsStyled = styled.section`
   .last-link {
     margin-bottom: 0;
   }
+  .loading-subpage {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #660000;
+  }
 `;

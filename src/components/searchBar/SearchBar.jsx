@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import {ReactComponent as SearchIcon} from "../../Images/search.svg";
-// import { toast } from "react-toastify";
 
 import { SearchStyles } from './SearchBar.styled'
 
