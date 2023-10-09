@@ -21,6 +21,8 @@ export const Searchbar = ({ onSubmit }) => {
     setValue("");
   };
 
+ 
+
 
 
   return (
