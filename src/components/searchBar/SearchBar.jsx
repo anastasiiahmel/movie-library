@@ -21,10 +21,6 @@ export const Searchbar = ({ onSubmit }) => {
     setValue("");
   };
 
- 
-
-
-
   return (
     <SearchStyles>
         <form className="form" onSubmit={handleSubmit}>

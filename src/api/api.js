@@ -8,7 +8,6 @@ axios.defaults.params = {
 
 export async function getPopularMovies(page = 1) {
   const response = await axios.get('/trending/movie/day', { params: { page } });
-  // console.log('response.data :>> ', response.data);
   return response.data;
 }
 
