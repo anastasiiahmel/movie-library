@@ -23,9 +23,9 @@
 </div>
 
 <h2>Preview</h2>
-<img src="https://i.imgur.com/3UqEfMY.png" alt="welcome page" />
-<img src="https://i.imgur.com/IIhKsM3.png" alt="search page" />
-<img src="https://i.imgur.com/Hqd8gDg.png" alt="search2 page" />
-<img src="https://i.imgur.com/NJyST0H.png" alt="movie page" />
-<img src="https://i.imgur.com/NqyD0yZ.png" alt="cast page" />
-<img src="https://i.imgur.com/TX91aSs.png" alt="reviews page" />
+<img src="https://i.imgur.com/3UqEfMY.png" alt="welcome page"  />
+<img src="https://i.imgur.com/e1A4jbA.png" alt="search page" />
+<img src="https://i.imgur.com/vshIuiH.png" alt="search2 page " />
+<img src="https://i.imgur.com/2oVmv9A.png" alt="movie page" width="1300"/>
+<img src="https://i.imgur.com/eXbtQK3.png" alt="cast page" width="1300" />
+<img src="https://i.imgur.com/TX91aSs.png" alt="reviews page" width="1300" />
