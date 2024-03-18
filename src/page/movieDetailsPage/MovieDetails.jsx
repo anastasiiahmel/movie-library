@@ -7,6 +7,7 @@ import { getMoviesDetailsById } from '../../api/api';
 import { MovieDetailsStyled } from './MovieDetails.styled';
 
 import NoPoster from '../../images/no-photo.jpg';
+import { Loader } from 'components/loader/Loader';
 
 
 
@@ -84,7 +85,7 @@ const MovieDetailsPage = () => {
           </div>
         </div>
       </MovieDetailsStyled>
-      <Suspense fallback={<div className='loading-subpage'>Loading subpage...</div>}>
+      <Suspense fallback={<Loader/>}>
         <Outlet/> 
       </Suspense>
     </>

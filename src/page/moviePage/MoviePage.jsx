@@ -3,10 +3,13 @@ import { useSearchParams } from 'react-router-dom';
 
 import { getSearchedMovies } from '../../api/api';
 
+import {message} from 'antd';
+
 import { Searchbar } from 'components/searchBar/SearchBar';
 import PopularMoviesList from 'components/popularMovieList/PopularMovieList';
 
 import { MoviePageStyle } from './moviePageStyle.styled';
+import { Loader } from 'components/loader/Loader';
 
 const MoviePage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -26,7 +29,10 @@ const MoviePage = () => {
     const fetchSearchedMovies = useCallback(async query => {
         try {
         setLoading(true);
-        const data = await getSearchedMovies(query);
+            const data = await getSearchedMovies(query);
+              if (data.results.length === 0) {
+             message.error("We found nothing for this request!")
+             }
         setSearchResults(data.results);
       } 
       catch (error) {
@@ -57,7 +63,7 @@ const MoviePage = () => {
     return (
         <MoviePageStyle>
             <Searchbar onSubmit={handleSubmit}/>
-            {loading && (<div className='loading-movie-page'>Loading data...</div>)}
+            {loading && <Loader/>}
             <PopularMoviesList searchResults={searchResults}/>
         </MoviePageStyle>
     );

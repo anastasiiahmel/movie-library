@@ -2,15 +2,25 @@ import { styled } from 'styled-components';
 
 export const MovieDetailsStyled = styled.section`
   .list-additional {
+    cursor: pointer;
     list-style: none;
     background-color: #660000;
     width: 100px;
     color: white;
+    transition: background-color 0.5s;
+  }
+
+  .list-additional:hover {
+    background-color: #722121;
   }
 
   .list-cast {
     margin-bottom: 10px;
   }
+
+  /* .list-cast:hover {
+    background-color: #722121;
+  } */
 
   .back-link {
     display: flex;

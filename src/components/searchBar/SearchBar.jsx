@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { SearchStyles } from './SearchBar.styled'
+import { message } from "antd";
 
 
 export const Searchbar = ({ onSubmit }) => {
@@ -9,16 +10,22 @@ export const Searchbar = ({ onSubmit }) => {
 
   const handleChange = (event) => {
     setValue(event.target.value.toLowerCase());
+
   };
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (value.trim() === "") {
-      return console.log("Please enter key words for search");
+      return message.info("Please enter key words for search");
     }
     onSubmit(value);
+  
     setValue("");
+
+   
+
+    
   };
 
   return (
