@@ -22,7 +22,8 @@ export const MovieDetailsStyled = styled.section`
     background-color: #722121;
   } */
 
-  .back-link {
+  .back-btn {
+    color: #660000 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +38,15 @@ export const MovieDetailsStyled = styled.section`
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border-color 0.5s;
+  }
+  .back-btn:hover {
+    border-color: #660000 !important;
   }
 
+  .back-link {
+    padding: 0 25px;
+  }
   .main-content {
     display: flex;
     gap: 20px;

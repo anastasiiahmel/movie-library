@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback} from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { Suspense } from 'react';
 
+import {  Button  } from 'antd';
+
 import { getMoviesDetailsById } from '../../api/api';
 
 import { MovieDetailsStyled } from './MovieDetails.styled';
@@ -44,7 +46,9 @@ const MovieDetailsPage = () => {
   return (
     <>
       <MovieDetailsStyled>
+        <Button className='back-btn' to={backLink}>
         <Link className='back-link' to={backLink}>Go back</Link>
+        </Button>
         <div className='main-content'>
           <img className='main-img' width={170}
             src={moviesInfo.poster_path
