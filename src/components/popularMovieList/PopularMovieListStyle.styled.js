@@ -13,8 +13,6 @@ export const PopularMovieListStyle = styled.ul`
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-
-    /* font-family: 'Times New Roman', Times, serif; */
   }
 
   .movie-preview {
@@ -23,15 +21,16 @@ export const PopularMovieListStyle = styled.ul`
     justify-content: center;
     flex-direction: column;
     max-width: 210px;
+    height: 400px;
     background-color: white;
 
     overflow: hidden;
   }
 
-  .movie-img {
+  /* .movie-img {
     width: 100%;
     height: auto;
-  }
+  } */
 
   .film-name {
     font-size: 20px;

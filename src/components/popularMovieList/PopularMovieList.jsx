@@ -4,13 +4,15 @@ import { Link, useLocation } from 'react-router-dom';
 import { PopularMovieListStyle } from './PopularMovieListStyle.styled';
 
 import NoPoster from '..//..//images/no-photo.jpg';
+import { Loader } from 'components/loader/Loader';
 
 
 
- const  PopularMoviesList = ({ trendFilms, searchResults}) => {
+ const   PopularMoviesList = ({ trendFilms, searchResults}) => {
   const location = useLocation();
   const [arrayList, setArrayList] = useState([]);
-  const isHomePage = location.pathname === "/";
+   const isHomePage = location.pathname === "/";
+       const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
@@ -36,11 +38,13 @@ import NoPoster from '..//..//images/no-photo.jpg';
 
 
     Promise.all(promises)
-      .then(() => {
+    .then(() => {
+        setLoading(true)
       })
       .catch(() => {
         console.log('Error loading images');
       });
+      setLoading(false)
       setArrayList(films);
   }, [trendFilms, searchResults]);
 
@@ -55,7 +59,8 @@ import NoPoster from '..//..//images/no-photo.jpg';
 
 
       <PopularMovieListStyle>
-         {isHomePage && <h1 className='hero-section-title'>Trending Movies</h1>}
+      {isHomePage && <h1 className='hero-section-title'>Trending Movies</h1>}
+      {loading && <Loader/>}
         <ul className='movie-list'>
           {arrayList.map(item => (
             <li className='movie-item' key={item.id}>
