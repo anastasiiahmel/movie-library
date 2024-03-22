@@ -9,12 +9,11 @@ import { Searchbar } from 'components/searchBar/SearchBar';
 import PopularMoviesList from 'components/popularMovieList/PopularMovieList';
 
 import { MoviePageStyle } from './moviePageStyle.styled';
-import { Loader } from 'components/loader/Loader';
+
 
 const MoviePage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [searchResults, setSearchResults] = useState([]);
-    const [loading, setLoading] = useState(false);
 
   
     const query = searchParams.get('query');
@@ -28,42 +27,33 @@ const MoviePage = () => {
     
     const fetchSearchedMovies = useCallback(async query => {
         try {
-        setLoading(true);
             const data = await getSearchedMovies(query);
               if (data.results.length === 0) {
              message.error("We found nothing for this request!")
              }
-        setSearchResults(data.results);
+            setSearchResults(data.results);
       } 
       catch (error) {
         console.log(error.message);
       } 
-      finally {
-          setLoading(false);
-        }
     }, []);
     
     
     useEffect(() => {
         if (!searchResults.length) {
-          setLoading(false);
         }
-    }, [searchResults]);
-    
-  
-    useEffect(() => {
-        if (!query) {
+
+         if (!query) {
             return;
         }
         fetchSearchedMovies(query);
-    }, [query, fetchSearchedMovies]);
-
+    }, [searchResults, query, fetchSearchedMovies]);
+    
 
 
     return (
         <MoviePageStyle>
             <Searchbar onSubmit={handleSubmit}/>
-            {loading && <Loader/>}
             <PopularMoviesList searchResults={searchResults}/>
         </MoviePageStyle>
     );

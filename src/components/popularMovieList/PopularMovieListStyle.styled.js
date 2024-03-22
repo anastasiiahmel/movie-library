@@ -23,14 +23,13 @@ export const PopularMovieListStyle = styled.ul`
     max-width: 210px;
     height: 400px;
     background-color: white;
-
     overflow: hidden;
+    transition: filter 0.9s;
   }
 
-  /* .movie-img {
-    width: 100%;
-    height: auto;
-  } */
+  .movie-preview:hover {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  }
 
   .film-name {
     font-size: 20px;
