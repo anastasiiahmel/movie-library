@@ -16,16 +16,12 @@ export const Searchbar = ({ onSubmit }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (value.trim() === "") {
+    if (value === "") {
       return message.info("Please enter key words for search");
     }
     onSubmit(value);
   
     setValue("");
-
-   
-
-    
   };
 
   return (

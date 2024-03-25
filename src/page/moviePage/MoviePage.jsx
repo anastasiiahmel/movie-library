@@ -40,14 +40,11 @@ const MoviePage = () => {
     
     
     useEffect(() => {
-        if (!searchResults.length) {
-        }
-
          if (!query) {
             return;
         }
         fetchSearchedMovies(query);
-    }, [searchResults, query, fetchSearchedMovies]);
+    }, [ query, fetchSearchedMovies]);
     
 
 
