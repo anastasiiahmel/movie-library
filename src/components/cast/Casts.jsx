@@ -36,6 +36,7 @@ const Casts = () => {
         ) : (
           moviesCast.map(moviesCast => (
             <li className='cast-card' key={moviesCast.id}>
+              <div className='cast-photo-div'>
               <img className='cast-photo'
                   width={170}
                   src={
@@ -45,8 +46,11 @@ const Casts = () => {
                   }
                   alt="Actor"
               />
+              </div>
+              <div className='cast-info'>
               <p>Name:{moviesCast.original_name}</p>
               <p>Character: {moviesCast.character}</p>
+              </div>
             </li>
           ))
         )}

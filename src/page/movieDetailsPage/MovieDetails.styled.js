@@ -12,15 +12,14 @@ export const MovieDetailsStyled = styled.section`
 
   .list-additional:hover {
     background-color: #722121;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.2));
   }
 
-  .list-cast {
-    margin-bottom: 10px;
-  }
 
-  /* .list-cast:hover {
-    background-color: #722121;
-  } */
+.list{
+  display: flex;
+  gap: 10px;
+}
 
   .back-btn {
     color: #660000 !important;
@@ -60,8 +59,8 @@ export const MovieDetailsStyled = styled.section`
 
   .main-decr {
     display: flex;
+    margin-top: 50px;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .card-title {
@@ -95,7 +94,6 @@ export const MovieDetailsStyled = styled.section`
   }
 
   .info-link {
-    margin-bottom: 10px;
     display: inline-block;
     padding: 5px 15px;
     border-radius: 15px;

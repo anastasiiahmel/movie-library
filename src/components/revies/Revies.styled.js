@@ -4,8 +4,11 @@ export const ReviesContainer = styled.div`
   margin-top: 20px;
 
   .revies-item {
+    display: flex;
+   flex-direction: column;
     padding: 20px 25px;
-    background-color: #f2ead3;
+    margin-bottom: 20px;
+    background-color: #fff7f7;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   }
 
