@@ -13,13 +13,15 @@
 
 <h2>Built with</h2>
 <div align="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/React_Logo_SVG.svg" alt="react logo"  width="100" height="100"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react logo" height="40"/>
   <img width="12" />
-  <img src="https://www.codesmith.io/hs-fs/hubfs/Blog%20Images/Blog%20Photos/react-router-logo.png?width=600&name=react-router-logo.png"  alt="react router" width="150" height="100"/>
+  <img src="https://www.svgrepo.com/show/354262/react-router.svg"  alt="react router "height="40"/>
   <img width="12" />
-  <img src="https://cdn-media-1.freecodecamp.org/images/1*p1TndLk3UsGPBsM7qHPZIw.png" alt="styled-components" width="100" height="100"/>
+  <img src="https://avatars.githubusercontent.com/u/20658825?s=48&v=4" alt="styled-components" height="40"/>
   <img width="12" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Axios_logo_%282020%29.svg/2560px-Axios_logo_%282020%29.svg.png" alt="axios" width="200" height="100"/>
+   <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"  height="40" alt="ant-design" />
+  <img width="12" />
+  <img src="https://cdn.worldvectorlogo.com/logos/axios.svg" alt="axios"  height="40"/>
 </div>
 
 <h2>Preview</h2>
