@@ -9,7 +9,7 @@ import { getMoviesDetailsById } from '../../api/api';
 import { MovieDetailsStyled } from './MovieDetails.styled';
 
 import NoPoster from '../../images/no-photo.jpg';
-import { Loader } from 'components/LoaderWebsite/Loader';
+import { Loader } from 'components/Loader/Loader';
 
 const MovieDetailsPage = () => {
   const location = useLocation();

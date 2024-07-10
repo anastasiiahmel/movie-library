@@ -2,15 +2,15 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 import { Navigate } from 'react-router-dom';
 
-import { SharedLayout } from './SharedLayoutWebsite/SharedLayout';
+import { SharedLayout } from './SharedLayout/SharedLayout';
 
 const HomePage = lazy(() => import('../page/homePage/HomePage'));
 const MoviePage = lazy(() => import('../page/moviePage/MoviePage'));
 const MovieDetaisPage = lazy(() =>
   import('../page/movieDetailsPage/MovieDetails')
 );
-const Casts = lazy(() => import('./CastsMovie/Casts'));
-const Revies = lazy(() => import('./ReviesMovie/Revies'));
+const Casts = lazy(() => import('./Casts/Casts'));
+const Revies = lazy(() => import('./Revies/Revies'));
 
 export const App = () => {
   return (

@@ -5,7 +5,7 @@ import { getSearchedMovies } from '../../api/api';
 
 import { message } from 'antd';
 
-import { Searchbar } from 'components/SearchBarWebsite/SearchBar';
+import { Searchbar } from 'components/SearchBar/SearchBar';
 import PopularMoviesList from 'components/PopularMovies/PopularMovieList';
 
 import { MoviePageStyle } from './moviePageStyle.styled';
