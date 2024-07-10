@@ -25,7 +25,7 @@
 </div>
 
 <h2>Preview</h2>
-<img src="https://i.imgur.com/3UqEfMY.png" alt="welcome page"  />
+<img src="https://i.imgur.com/X0F9rZe.png" alt="welcome page"  />
 <img src="https://i.imgur.com/e1A4jbA.png" alt="search page" />
 <img src="https://i.imgur.com/vshIuiH.png" alt="search2 page "  width="1200/>
 <img src="https://i.imgur.com/cgMzKqi.png" alt="movie page" width="1200"/>
