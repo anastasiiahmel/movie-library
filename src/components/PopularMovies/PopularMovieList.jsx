@@ -1,15 +1,14 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { PopularMovieListStyle } from './PopularMovieListStyle.styled';
-import NoPoster from '..//..//images/no-photo.jpg';
-import { Loader } from 'components/loader/Loader';
+import NoPoster from '../../images/no-photo.jpg';
+import { Loader } from 'components/LoaderWebsite/Loader';
 
 const PopularMoviesList = ({ trendFilms, searchResults }) => {
   const location = useLocation();
   const [arrayList, setArrayList] = useState([]);
   const [loading, setLoading] = useState(false);
-  const isHomePage = location.pathname === "/";
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const films = trendFilms || searchResults;
@@ -18,30 +17,9 @@ const PopularMoviesList = ({ trendFilms, searchResults }) => {
       return;
     }
 
-    const promises = films.map(item => {
-      if (!item.poster_path) {
-        return Promise.resolve();
-      }
-
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = `https://image.tmdb.org/t/p/original/${item.poster_path}`;
-        img.onload = resolve;
-        img.onerror = reject;
-      });
-    });
-
-
-    Promise.all(promises)
-      .then(() => {
-        setLoading(false); 
-      })
-      .catch(() => {
-        console.log('Error loading images');
-        setLoading(false); 
-      });
-
+    setLoading(true);
     setArrayList(films);
+    setLoading(false);
   }, [trendFilms, searchResults]);
 
   const createMovieDetailsURL = movieID => {
@@ -50,25 +28,24 @@ const PopularMoviesList = ({ trendFilms, searchResults }) => {
 
   return (
     <PopularMovieListStyle>
-      {isHomePage && <h1 className='hero-section-title'>Trending Movies</h1>}
-      {loading && <Loader />} 
-      <ul className='movie-list'>
+      {isHomePage && <h1 className="hero-section-title">Trending Movies</h1>}
+      {loading && <Loader />}
+      <ul className="movie-list">
         {arrayList.map(item => (
-          <li className='movie-item' key={item.id}>
-            <div className='movie-preview'>
+          <li className="movie-item" key={item.id}>
+            <div className="movie-preview">
               <Link
                 style={{ textDecoration: 'none', color: 'black' }}
                 to={createMovieDetailsURL(item.id)}
                 state={{ from: location }}
               >
                 <img
-                  className='movie-img'
+                  className="movie-img"
                   width={210}
                   height={315}
-                  loading='lazy'
                   src={
                     item.poster_path
-                      ? `https://image.tmdb.org/t/p/original/${item.poster_path}`
+                      ? `https://image.tmdb.org/t/p/w300/${item.poster_path}`
                       : NoPoster
                   }
                   alt={item.title}
@@ -76,7 +53,7 @@ const PopularMoviesList = ({ trendFilms, searchResults }) => {
                     error.target.src = NoPoster;
                   }}
                 />
-                <p className='film-name'>{item.title}</p>
+                <p className="film-name">{item.title}</p>
               </Link>
             </div>
           </li>

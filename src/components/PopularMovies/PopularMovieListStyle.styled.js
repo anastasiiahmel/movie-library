@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const PopularMovieListStyle = styled.ul`
+export const PopularMovieListStyle = styled.div`
   text-align: center;
 
   .hero-section-title {
@@ -12,7 +12,7 @@ export const PopularMovieListStyle = styled.ul`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
   }
 
   .movie-preview {
@@ -32,7 +32,7 @@ export const PopularMovieListStyle = styled.ul`
   }
 
   .film-name {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     text-align: center;
     min-height: 48px;
