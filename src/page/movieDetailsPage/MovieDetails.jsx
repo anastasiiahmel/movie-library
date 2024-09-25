@@ -10,6 +10,7 @@ import { MovieDetailsStyled } from './MovieDetails.styled';
 
 import NoPoster from '../../images/no-photo.jpg';
 import { Loader } from 'components/Loader/Loader';
+import TrailerMovie from 'components/TrailerMovie/TrailerMovie';
 
 const MovieDetailsPage = () => {
   const location = useLocation();
@@ -66,7 +67,9 @@ const MovieDetailsPage = () => {
               <h3 className="genres-title">Genres:</h3>
               {genres &&
                 genres.map(genre => <span key={genre.id}> {genre.name},</span>)}
+              <TrailerMovie />
             </div>
+
             <div>
               <h3 className="information-title">Additional Information</h3>
               <ul className="list">

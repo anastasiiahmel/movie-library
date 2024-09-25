@@ -41,8 +41,6 @@ const PopularMoviesList = ({ trendFilms, searchResults }) => {
               >
                 <img
                   className="movie-img"
-                  width={210}
-                  height={315}
                   src={
                     item.poster_path
                       ? `https://image.tmdb.org/t/p/w300/${item.poster_path}`

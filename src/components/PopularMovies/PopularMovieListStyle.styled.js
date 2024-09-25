@@ -21,23 +21,36 @@ export const PopularMovieListStyle = styled.div`
     justify-content: center;
     flex-direction: column;
     max-width: 210px;
-    height: 400px;
+    max-height: 400px;
     background-color: white;
+    border-radius: 5%;
     overflow: hidden;
-    transition: filter 0.9s;
+    transition: background-color 0.5s;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  }
+  .movie-img {
+    max-width: 210px;
+    max-height: 315px;
   }
 
   .movie-preview:hover {
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    background-color: #722121;
+  }
+
+  .movie-preview:hover .film-name {
+    color: #fff;
+    font-size: 15px;
   }
 
   .film-name {
     font-size: 18px;
     font-weight: 700;
     text-align: center;
-    min-height: 48px;
+    min-height: 30px;
     width: 100%;
+    transition: color 0.5s, font-size 0.5s;
   }
+
   .hero-section-title {
     font-size: 50px;
     color: #660000;

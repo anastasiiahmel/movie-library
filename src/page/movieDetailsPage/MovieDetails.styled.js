@@ -15,11 +15,10 @@ export const MovieDetailsStyled = styled.section`
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.2));
   }
 
-
-.list{
-  display: flex;
-  gap: 10px;
-}
+  .list {
+    display: flex;
+    gap: 10px;
+  }
 
   .back-btn {
     color: #660000 !important;

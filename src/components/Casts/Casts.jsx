@@ -2,9 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { getMoviesCast } from '../../api/api';
-
-import NoPhoto from '..//../images/no-photo.jpg';
-
+import NoPhoto from '../../images/no-photo.jpg';
 import { CastList } from './Casts.styled';
 
 const Casts = () => {
@@ -16,7 +14,7 @@ const Casts = () => {
       const data = await getMoviesCast(moviesID);
       setMoviesCast(data);
     } catch (error) {
-      console.log(error.message);
+      console.error('Error fetching movie cast:', error.message);
     }
   }, [moviesID]);
 
@@ -28,25 +26,25 @@ const Casts = () => {
     <CastList>
       <ul className="cast-list">
         {moviesCast.length === 0 ? (
-          <p>There are no cast.</p>
+          <p>There are no cast members.</p>
         ) : (
-          moviesCast.map(moviesCast => (
-            <li className="cast-card" key={moviesCast.id}>
+          moviesCast.map(({ id, profile_path, original_name, character }) => (
+            <li className="cast-card" key={id}>
               <div className="cast-photo-div">
                 <img
                   className="cast-photo"
                   width={170}
                   src={
-                    moviesCast.profile_path
-                      ? `https://image.tmdb.org/t/p/w300/${moviesCast.profile_path}`
+                    profile_path
+                      ? `https://image.tmdb.org/t/p/w300/${profile_path}`
                       : NoPhoto
                   }
-                  alt="Actor"
+                  alt={original_name}
                 />
               </div>
               <div className="cast-info">
-                <p>Name: {moviesCast.original_name}</p>
-                <p>Character: {moviesCast.character}</p>
+                <p>Name: {original_name}</p>
+                <p>Character: {character}</p>
               </div>
             </li>
           ))

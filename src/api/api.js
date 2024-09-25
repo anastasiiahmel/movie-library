@@ -10,7 +10,7 @@ export async function getPopularMovies(page = 1) {
   const response = await axios.get('/trending/movie/day', { params: { page } });
   return response.data;
 }
-// export async function getImgMovies
+
 export async function getSearchedMovies(query) {
   const response = await axios.get('/search/movie?query', {
     params: { query },
@@ -31,4 +31,9 @@ export async function getMoviesCast(movieId) {
 export async function getMoviesReviews(movieId) {
   const response = await axios.get(`movie/${movieId}/reviews`);
   return response.data.results;
+}
+
+export async function getMoviesVideo(movieId) {
+  const response = await axios.get(`movie/${movieId}/videos`);
+  return response.data;
 }
