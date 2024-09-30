@@ -4,12 +4,10 @@ import { Navigate } from 'react-router-dom';
 
 import { SharedLayout } from './SharedLayout/SharedLayout';
 
-const HomePage = lazy(() => import('../page/homePage/HomePage'));
-const MoviePage = lazy(() => import('../page/moviePage/MoviePage'));
-const MovieDetaisPage = lazy(() =>
-  import('../page/movieDetailsPage/MovieDetails')
-);
-const Casts = lazy(() => import('./Casts/Casts'));
+const HomePage = lazy(() => import('../pages/HomePage'));
+const MovieSearchPage = lazy(() => import('../pages/MovieSearchPage'));
+const MovieDetaisPage = lazy(() => import('../pages/MovieDetailsPage'));
+const Cast = lazy(() => import('./Cast/Cast'));
 const Revies = lazy(() => import('./Revies/Revies'));
 
 export const App = () => {
@@ -17,9 +15,9 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/movies" element={<MoviePage />} />
+        <Route path="/movies" element={<MovieSearchPage />} />
         <Route path="movies/:moviesID" element={<MovieDetaisPage />}>
-          <Route path="cast" element={<Casts />} />
+          <Route path="cast" element={<Cast />} />
           <Route path="review" element={<Revies />} />
         </Route>
       </Route>

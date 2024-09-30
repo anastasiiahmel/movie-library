@@ -8,9 +8,9 @@ import { message } from 'antd';
 import { Searchbar } from 'components/SearchBar/SearchBar';
 import PopularMoviesList from 'components/PopularMovies/PopularMovieList';
 
-import { MoviePageStyle } from './moviePageStyle.styled';
+import { MoviePageStyle } from './MovieSearch.styled';
 
-const MoviePage = () => {
+const MovieSearch = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchResults, setSearchResults] = useState([]);
 
@@ -48,4 +48,4 @@ const MoviePage = () => {
   );
 };
 
-export default MoviePage;
+export default MovieSearch;

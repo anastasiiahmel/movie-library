@@ -38,11 +38,12 @@ export const TrailerContainer = styled.div`
 
   .video-title {
     position: relative;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     color: black;
     transition: color 0.5s;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-left: 5px;
   }
   .video-title:hover {
     color: #660000;

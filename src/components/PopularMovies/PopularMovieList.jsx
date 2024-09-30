@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { PopularMovieListStyle } from './PopularMovieListStyle.styled';
-import NoPoster from '../../images/no-photo.jpg';
+import NoPoster from '../../assets/images/no-photo.jpg';
 import { Loader } from 'components/Loader/Loader';
 
 const PopularMoviesList = ({ trendFilms, searchResults }) => {

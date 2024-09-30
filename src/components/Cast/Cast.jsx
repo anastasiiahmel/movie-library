@@ -2,10 +2,10 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { getMoviesCast } from '../../api/api';
-import NoPhoto from '../../images/no-photo.jpg';
-import { CastList } from './Casts.styled';
+import NoPhoto from '../../assets/images/no-photo.jpg';
+import { CastList } from './Cast.styled';
 
-const Casts = () => {
+const Cast = () => {
   const [moviesCast, setMoviesCast] = useState([]);
   const { moviesID } = useParams();
 
@@ -54,4 +54,4 @@ const Casts = () => {
   );
 };
 
-export default Casts;
+export default Cast;

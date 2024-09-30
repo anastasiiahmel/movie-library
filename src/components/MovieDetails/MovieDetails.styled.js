@@ -3,21 +3,29 @@ import { styled } from 'styled-components';
 export const MovieDetailsStyled = styled.section`
   .list-additional {
     cursor: pointer;
+    border-radius: 20px;
     list-style: none;
-    background-color: #660000;
-    width: 100px;
-    color: white;
-    transition: background-color 0.5s;
+    background-color: #ffe6e6;
+    width: 160px;
+    transition: filter 0.5s;
+    position: relative;
   }
 
   .list-additional:hover {
-    background-color: #722121;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+  }
+  .cast-icon {
+    position: absolute;
+    top: 4px;
+    margin-left: 5px;
+    width: 20px;
+    height: 30px;
   }
 
   .list {
     display: flex;
     gap: 10px;
+    padding: 0px;
   }
 
   .back-btn {
@@ -63,7 +71,7 @@ export const MovieDetailsStyled = styled.section`
   }
 
   .card-title {
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 20px;
   }
 
@@ -82,24 +90,22 @@ export const MovieDetailsStyled = styled.section`
   .genres-title {
     margin-bottom: 10px;
   }
-
-  .information-title {
-    padding: 8px 18px;
-    color: white;
-    background-color: #660000;
-    width: 300px;
-    margin-bottom: 10px;
-    font-size: 24px;
+  .genres-item {
+    background-color: #ffe6e6;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
   }
 
   .info-link {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 10px 40px;
+    padding-right: 80px;
     border-radius: 15px;
     text-decoration: none;
     text-align: center;
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
+    color: #000;
 
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s;

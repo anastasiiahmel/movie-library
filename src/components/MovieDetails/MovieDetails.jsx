@@ -1,29 +1,27 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
-import { Suspense } from 'react';
-
 import { Button } from 'antd';
+import { LuClapperboard } from 'react-icons/lu';
+import { MdOutlineReviews } from 'react-icons/md';
 
 import { getMoviesDetailsById } from '../../api/api';
-
 import { MovieDetailsStyled } from './MovieDetails.styled';
-
-import NoPoster from '../../images/no-photo.jpg';
+import NoPoster from '../../assets/images/no-photo.jpg';
 import { Loader } from 'components/Loader/Loader';
 import TrailerMovie from 'components/TrailerMovie/TrailerMovie';
 
-const MovieDetailsPage = () => {
+const MovieDetails = () => {
+  const { moviesID } = useParams();
   const location = useLocation();
   const [moviesInfo, setMoviesInfo] = useState({});
-  const { moviesID } = useParams();
-  const backLink = location?.state?.from ?? '/';
+  const backLink = location.state?.from || '/';
 
   const fetchMoviesDetails = useCallback(async () => {
     try {
       const data = await getMoviesDetailsById(moviesID);
       setMoviesInfo(data);
     } catch (error) {
-      console.log(error.message);
+      console.error(error.message);
     }
   }, [moviesID]);
 
@@ -31,11 +29,10 @@ const MovieDetailsPage = () => {
     fetchMoviesDetails();
   }, [fetchMoviesDetails]);
 
-  const date = new Date(moviesInfo.release_date);
-  const year = date.getFullYear();
-  const score = Math.round(moviesInfo.vote_average * 10);
-  const overview = moviesInfo.overview;
-  const genres = moviesInfo.genres;
+  const { title, release_date, vote_average, overview, genres, poster_path } =
+    moviesInfo;
+  const year = new Date(release_date).getFullYear();
+  const score = Math.round(vote_average * 10);
 
   return (
     <>
@@ -50,28 +47,30 @@ const MovieDetailsPage = () => {
             className="main-img"
             width={170}
             src={
-              moviesInfo.poster_path
-                ? `https://image.tmdb.org/t/p/original/${moviesInfo.poster_path}`
+              poster_path
+                ? `https://image.tmdb.org/t/p/original/${poster_path}`
                 : NoPoster
             }
-            alt={moviesInfo.title}
+            alt={title}
           />
           <div className="main-decr">
             <div>
               <h2 className="card-title">
-                {moviesInfo.title} ({year})
+                {title} ({year})
               </h2>
               <p className="card-score">User score {score} %</p>
               <h3 className="card-overview">Overview:</h3>
               <p className="text-overview">{overview}</p>
               <h3 className="genres-title">Genres:</h3>
               {genres &&
-                genres.map(genre => <span key={genre.id}> {genre.name},</span>)}
+                genres.map(genre => (
+                  <span className="genres-item" key={genre.id}>
+                    {genre.name}{' '}
+                  </span>
+                ))}
               <TrailerMovie />
             </div>
-
             <div>
-              <h3 className="information-title">Additional Information</h3>
               <ul className="list">
                 <li className="list-additional list-cast">
                   <Link
@@ -79,7 +78,8 @@ const MovieDetailsPage = () => {
                     to="cast"
                     state={{ from: backLink }}
                   >
-                    Casts
+                    CAST
+                    <LuClapperboard className="cast-icon" />
                   </Link>
                 </li>
                 <li className="list-additional">
@@ -88,7 +88,8 @@ const MovieDetailsPage = () => {
                     to="review"
                     state={{ from: backLink }}
                   >
-                    Reviews
+                    REVIEWS
+                    <MdOutlineReviews className="cast-icon" />
                   </Link>
                 </li>
               </ul>
@@ -103,4 +104,4 @@ const MovieDetailsPage = () => {
   );
 };
 
-export default MovieDetailsPage;
+export default MovieDetails;
