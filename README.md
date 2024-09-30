@@ -5,10 +5,10 @@
 <h2>Functionalities</h2>
 
 <ul>
-  <li>Search for movies</li>
-  <li>Site routing </li>
-  <li>Additional information about the movie: genre, actors, reviews</li>
-  <li>General evaluation of the audience</li>
+  <li>Search for movies 🔎</li>
+  <li>Site routing 🖍</li>
+  <li>Additional information about the movie: genre, actors, reviews 🎬</li>
+  <li>Overall audience rating and trailer review 🍿</li>
 </ul>
 
 <h2>Built with</h2>
@@ -25,9 +25,8 @@
 </div>
 
 <h2>Preview</h2>
-<img src="https://i.imgur.com/ffdPigC.png" alt="welcome page"  width="1200 />
-<img src="https://i.imgur.com/e1A4jbA.png" alt="search page" />
-<img src="https://i.imgur.com/vshIuiH.png" alt="search2 page "  width="1200/>
-<img src="https://i.imgur.com/cgMzKqi.png" alt="movie page" width="1200"/>
-<img src="https://i.imgur.com/0pJdMCL.png" alt="cast page" width="1300" />
-<img src="https://i.imgur.com/0MJ2uHc.png" alt="reviews page" width="1300" />
+<img src="https://i.imgur.com/sUfe3Hf.png" alt="home page" />
+<img src="https://i.imgur.com/3rfZ902.png" alt="movie delails page" width="1200"/>
+<img src="https://i.imgur.com/3C2Sxfq.png" alt="search page" width="1200"/>
+<img src="https://i.imgur.com/WfOZgoo.png" alt="cast page" width="1200"/>
+<img src="https://i.imgur.com/DEaeYM8.png" alt="review page" width="1200"/>
