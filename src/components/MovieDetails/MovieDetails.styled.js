@@ -26,6 +26,7 @@ export const MovieDetailsStyled = styled.section`
     display: flex;
     gap: 10px;
     padding: 0px;
+    margin-top: 20px;
   }
 
   .back-btn {
