@@ -8,12 +8,19 @@ export const PopularMovieListStyle = styled.div`
     font-weight: 500;
     margin-bottom: 20px;
   }
+
   .movie-list {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 0;
+  }
+
+  .movie-item {
+    flex: 0 1 calc(33.33% - 10px);
+    margin-bottom: 20px;
   }
 
   .movie-preview {
@@ -21,8 +28,7 @@ export const PopularMovieListStyle = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 400px;
-    max-height: 500px;
+    width: 100%;
     background-color: rgba(95, 6, 23, 0.3);
     border-radius: 5%;
     overflow: hidden;
@@ -35,9 +41,14 @@ export const PopularMovieListStyle = styled.div`
   }
 
   .movie-img {
-    width: 100%;
-    max-width: 400px;
-    max-height: 500px;
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .no-poster {
+    width: 300px;
+    height: 450px;
     object-fit: cover;
   }
 

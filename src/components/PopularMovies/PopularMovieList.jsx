@@ -40,7 +40,9 @@ const PopularMoviesList = ({ trendFilms, searchResults }) => {
                 state={{ from: location }}
               >
                 <img
-                  className="movie-img"
+                  className={`movie-img ${
+                    !item.poster_path ? 'no-poster' : ''
+                  }`}
                   src={
                     item.poster_path
                       ? `https://image.tmdb.org/t/p/w300/${item.poster_path}`
