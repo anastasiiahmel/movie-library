@@ -25,8 +25,8 @@
 </div>
 
 <h2>Preview</h2>
-<img src="https://i.imgur.com/sUfe3Hf.png" alt="home page" />
+<img src="https://i.imgur.com/NlCGVx1.png" alt="home page" />
 <img src="https://i.imgur.com/3rfZ902.png" alt="movie delails page" width="1200"/>
-<img src="https://i.imgur.com/3C2Sxfq.png" alt="search page" width="1200"/>
+<img src="https://i.imgur.com/39Ebi8O.png" alt="search page" width="1200"/>
 <img src="https://i.imgur.com/WfOZgoo.png" alt="cast page" width="1200"/>
 <img src="https://i.imgur.com/DEaeYM8.png" alt="review page" width="1200"/>
