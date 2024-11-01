@@ -61,8 +61,9 @@ export const MovieDetailsStyled = styled.section`
 
   .main-img {
     width: 100%;
-    height: auto;
     max-width: 350px;
+    height: 100%;
+    max-height: 480px;
   }
 
   .main-decr {
