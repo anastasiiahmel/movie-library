@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
 
-export const PopularMovieListStyle = styled.div`
+export const PopularMovieListStyle = styled.section`
   text-align: center;
 
   .hero-section-title {
     color: #660000;
-    font-weight: 500;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-bottom: 30px;
   }
   .container-img {
     position: relative;
@@ -40,7 +40,7 @@ export const PopularMovieListStyle = styled.div`
   }
 
   .movie-item {
-    flex: 0 1 calc(33.33% - 10px);
+    flex: 0 1 calc(5% - 10px);
     margin-bottom: 20px;
   }
 

@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 
 export const MovieDetailsStyled = styled.section`
+  font-size: 18px;
   .list-additional {
     cursor: pointer;
     border-radius: 20px;

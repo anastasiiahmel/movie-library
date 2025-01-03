@@ -32,7 +32,7 @@ const Cast = () => {
             <li className="cast-card" key={id}>
               <div className="cast-photo-div">
                 <img
-                  className="cast-photo"
+                  className={`cast-photo ${!profile_path ? 'no-poster' : ''}`}
                   width={170}
                   src={
                     profile_path
@@ -43,7 +43,7 @@ const Cast = () => {
                 />
               </div>
               <div className="cast-info">
-                <p>Name: {original_name}</p>
+                <p className="cast-name">Name: {original_name}</p>
                 <p>Character: {character}</p>
               </div>
             </li>

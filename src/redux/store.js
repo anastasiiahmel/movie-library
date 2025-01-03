@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { favoriteReducer } from './favoritesMovies/slice';
+import { favoriteReducer } from './favoriteMovies/slice';
 
 const persistConfig = {
-  key: 'favorite', 
+  key: 'favorite',
   storage,
 };
 
@@ -12,11 +12,11 @@ const persistedReducer = persistReducer(persistConfig, favoriteReducer);
 
 export const store = configureStore({
   reducer: {
-    favorite: persistedReducer, 
+    favorite: persistedReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      serializableCheck: false, 
+      serializableCheck: false,
     }),
 });
 

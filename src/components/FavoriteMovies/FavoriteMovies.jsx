@@ -3,7 +3,7 @@ import { Alert } from 'antd';
 
 import { ContainerFavorites } from './FavoriteMovies.styled';
 import PopularMoviesList from 'components/PopularMovies/PopularMovieList';
-import { selectFavoriteMovies } from '..//..//redux/favoritesMovies/selectors';
+import { selectFavoriteMovies } from '../../redux/favoriteMovies/selectors';
 
 const FavoriteMovies = () => {
   const favoriteMovies = useSelector(selectFavoriteMovies);

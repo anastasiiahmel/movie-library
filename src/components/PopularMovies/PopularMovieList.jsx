@@ -4,12 +4,12 @@ import { PopularMovieListStyle } from './PopularMovieListStyle.styled';
 import NoPoster from '../../assets/images/no-photo.jpg';
 import { Loader } from 'components/Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFavoriteMovies } from '..//..//redux/favoritesMovies/selectors';
+import { selectFavoriteMovies } from '../../redux/favoriteMovies/selectors';
 import { HeartOutlined, HeartFilled } from '@ant-design/icons';
 import {
   addFavoriteMovie,
   removeFavoriteMovie,
-} from '..//..//redux/favoritesMovies/slice';
+} from '../../redux/favoriteMovies/slice';
 
 const PopularMoviesList = ({ trendFilms, searchResults }) => {
   const location = useLocation();

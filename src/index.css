@@ -1,12 +1,10 @@
-@import-normalize; /* bring in normalize.css styles */
+@import 'normalize.css';
 
 body {
-  min-height: 100%;
   font-family: 'Roboto', sans-serif;
   background-color: rgba(95, 6, 23, 0.2);
   margin: 0;
 }
-
 *,
 *::before,
 *::after {

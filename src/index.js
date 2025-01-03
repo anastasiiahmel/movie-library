@@ -8,7 +8,7 @@ import { store, persistor } from './redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/movie-library">
+    <BrowserRouter basename="/">
       <Provider store={store} persistor={persistor}>
         <App />
       </Provider>
