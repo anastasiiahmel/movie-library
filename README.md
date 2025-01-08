@@ -32,5 +32,5 @@
 <img src="https://i.imgur.com/eLQG2S8.png" alt="movie delails page" width="1200"/>
 <img src="https://i.imgur.com/RxLnDq9.png" alt="search page" width="1200"/>
 <img src="https://i.imgur.com/6of7i1w.png" alt="favorite page" width="1200"/>
-<img src="https://i.imgur.com/WfOZgoo.png" alt="cast page" width="1200"/>
-<img src="https://i.imgur.com/DEaeYM8.png" alt="review page" width="1200"/>
+<img src="https://i.imgur.com/OrfgCtZ.png" alt="cast page" width="1200"/>
+<img src="https://i.imgur.com/4QcOjSn.png" alt="review page" width="1200"/>
